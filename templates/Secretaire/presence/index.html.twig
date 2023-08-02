@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+
+
+
+
+
+{% block body %}
+<section class="content">
+    <div class="container-fluid">
+    <h1>List of Teachers</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>LastName</th>
+                <th>FirstName</th>
+              
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for proffesseur in proffesseur %}
+                <tr>
+                    <td>{{ proffesseur.nom }}</td>
+                    <td>{{ proffesseur.prenom }}</td>
+                    
+                    <td>
+                        <a href="{{ path('app_presence_new', {'id': proffesseur.id}) }}">Mark present</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    
+{% endblock %}
+
+
+

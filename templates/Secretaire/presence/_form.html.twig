@@ -1,0 +1,71 @@
+{{ form_start(form ,{'attr':{'class':'body'}}) }}
+<form method="POST" action="{{ path('app_presence_new') }}">
+<div class="row clearfix">
+    <div class="col-md-12 col-sm-12">
+        <div class="form-group">
+            <div class="form-line">
+                    {{ form_row(form.Present)}}
+           </div>
+        </div>
+    </div>
+     
+</div>
+
+
+
+
+<div class="row clearfix">
+    <div class="col-md-12 col-sm-12">
+        <div class="form-group">
+            <div class="form-line">
+                     {{ form_row(form.HeureEntree) }}
+           </div>
+        </div>
+    </div>
+     
+</div>
+
+
+
+
+
+
+<div class="row clearfix">
+    <div class="col-md-12 col-sm-12">
+        <div class="form-group">
+            <div class="form-line">
+                      {{ form_row(form.HeureSortie) }}
+           </div>
+        </div>
+    </div>
+     
+</div>
+
+
+<div class="row clearfix">
+    <div class="col-md-12 col-sm-12">
+        <div class="form-group">
+            <div class="form-line">
+                     {{ form_row(form.Date) }}
+           </div>
+        </div>
+    </div>
+     
+</div>
+
+<div class="row clearfix">
+    <div class="col-md-12 col-sm-12">
+        <div class="form-group">
+            <div class="form-line">
+                     {{ form_row(form.Proffesseur) }}
+           </div>
+        </div>
+    </div>
+     
+</div>
+   
+  
+   <div class="col-sm-12">
+        <a href="{{ path('app_presence_liste') }}" type="submit"  class="btn btn-primary">Submit</a>
+    </div>
+{{ form_end(form) }}

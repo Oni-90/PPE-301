@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Attendance{% endblock %}
+
+{% block body %}
+<section class="content">
+    <div class="container-fluid">
+    <h1>Create new Presence</h1>
+
+    {{ include('secretaire/presence/_form.html.twig') }}
+
+   <a href="{{ path('app_presence_index') }}" class="btn btn-secondary">Go Back</a>
+{% endblock %}

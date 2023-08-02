@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <h1>Update Attendance</h1>
+
+    {{ include('presence/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_presence_index') }}">GO Back</a>
+
+    {{ include('presence/_delete_form.html.twig') }}
+{% endblock %}
