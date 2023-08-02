@@ -3,6 +3,7 @@ security:
     password_hashers:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
     # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
+<<<<<<< HEAD
 
 
 
@@ -36,18 +37,26 @@ security:
                 property: email        
 
   
+=======
+    providers:
+        users_in_memory: { memory: null }
+>>>>>>> origin/master
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             lazy: true
+<<<<<<< HEAD
             provider: chain_provider
             custom_authenticator: App\Security\UserAuthenticator
             logout:
                 path: app_logout
                 # where to redirect after logout
                 # target: app_any_route
+=======
+            provider: users_in_memory
+>>>>>>> origin/master
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
@@ -58,11 +67,16 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
+<<<<<<< HEAD
         - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/directeur, roles: ROLE_DIRECTEUR }
         - { path: ^/secretaire, roles: ROLE_SECRETAIRE }
         - { path: ^/eleve, roles: ROLE_ELEVE }
         # - { path: ^/directeur, roles: ROLE_DIRECTEUR }
+=======
+        # - { path: ^/admin, roles: ROLE_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }
+>>>>>>> origin/master
 
 when@test:
     security:
